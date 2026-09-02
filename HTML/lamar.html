@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Lamaran - Job Skill Analyzer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/CSS/lamaran.css">
+</head>
+
+<body>
+
+    <div class="lamaran-container">
+        <!-- TOMBOL KEMBALI -->
+        <a href="../index.html" class="btn-kembali">
+            <span class="material-icons">arrow_back</span> Kembali ke Beranda
+        </a>
+
+        <div class="lamaran-box">
+            <!-- SISI KIRI: INFO LOKER -->
+            <div class="info-loker">
+                <span class="material-icons ikon-gedung">domain</span>
+                <h2 id="judul-posisi"></h2>
+                <p id="nama-pt"></p>
+
+                <div class="info-detail">
+                    <span><span class="material-icons">location_on</span> Jakarta, Indonesia</span>
+                    <span><span class="material-icons">work</span> Full-Time</span>
+                </div>
+
+                <div class="pesan-semangat">
+                    <p>"Lengkapi data Anda dengan baik. CV yang menarik akan meningkatkan peluang Anda dipanggil HRD!"
+                    </p>
+                </div>
+            </div>
+
+            <!-- SISI KANAN: FORMULIR -->
+            <div class="form-area">
+                <h3>Kirimkan CV Terbaikmu</h3>
+                <form id="form-lamaran">
+
+                    <div class="grup-sejajar">
+                        <div class="grup-input">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="nama-pelamar" required>
+                        </div>
+                        <div class="grup-input">
+                            <label>Email</label>
+                            <input type="email" id="email-pelamar" required>
+                        </div>
+                    </div>
+                    <div class="grup-input">
+                        <label>Keahlian (Skill IT)</label>
+                        <textarea id="input-skill-lamaran" rows="3" placeholder="contoh: HTML, CSS, PHP, React"
+                            required></textarea>
+                    </div>
+
+                    <div class="grup-input">
+                        <label>Link Portofolio / LinkedIn (Opsional)</label>
+                        <input type="url" placeholder="https://linkedin.com/in/namaanda">
+                    </div>
+
+                    <!-- AREA UPLOAD BERGAYA DRAG & DROP -->
+                    <div class="grup-input">
+                        <label>Upload CV / Resume (PDF)</label>
+                        <div class="area-upload">
+                            <span class="material-icons ikon-upload">cloud_upload</span>
+                            <p>Klik atau seret file PDF ke sini</p>
+                            <span class="ukuran-file">Maksimal 5MB</span>
+                            <input type="file" accept=".pdf" required class="input-file">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-kirim">Kirim Lamaran <span
+                            class="material-icons">send</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/JS/lamaran.js"></script>
+
+</body>
+
+</html>

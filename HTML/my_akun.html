@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Akun - Job Skill Analyzer</title>
+    <!-- Ganti FontAwesome dengan Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/CSS/coba1.css">
+    <link rel="stylesheet" href="/CSS/cari_jobs.css">
+    <link rel="stylesheet" href="/CSS/my_akun.css">
+</head>
+
+<body>
+  
+    <header>
+        <div class="header-navigasi">
+            <div class="header-logo">Job Skill Analyzer</div>
+            <nav>
+                <ul id="menu-navigasi">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="/HTML/cari_jobs.html">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html" class="aktif teks-hijau">My Favorit</a></li>
+                </ul>
+            </nav>
+            <div class="login-register">
+                <div id="area-belum-login" class="area-auth">
+                    <button class="login">Login</button>
+                    <button class="register">Register</button>
+                </div>
+                <div id="area-sudah-login" class="area-profil sembunyi">
+                    <a href="#" class="profil-mini">
+                        <img id="foto-profil-header" src="" alt="Profil">
+                        <span id="nama-profil-header">Nama</span>
+                    </a>
+                    <span class="material-icons btn-logout" id="tombol-logout-header" title="Keluar">logout</span>
+                </div>
+                <span class="material-icons" id="tombol-menu">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-halaman-akun">
+        <div class="container-akun">
+            <aside class="sidebar-profil">
+                <div class="profil-header">
+                    <div class="foto-profil">
+                        <img src="" alt="Foto Profil" id="foto-profil-sidebar">
+                    </div>
+                    <h2 id="nama-profil-sidebar">Nama User</h2>
+                    <p id="email-akun">email@domain.com</p>
+                    <span class="badge-status">Pencari Kerja IT</span>
+                </div>
+
+                <div class="profil-menu">
+                    
+                    <button class="menu-btn aktif" id="btn-tab-favorit"><span class="material-icons">favorite</span>
+                        Lowongan Tersimpan</button>
+                    <button class="menu-btn" id="btn-tab-status"><span class="material-icons">work_history</span> Status
+                        Lamaran</button>
+                    <button class="menu-btn"><span class="material-icons">settings</span> Pengaturan Akun</button>
+                    <button class="menu-btn log-out" id="btn-logout-sidebar"><span class="material-icons">logout</span>
+                        Log Out</button>
+                </div>
+            </aside>
+
+      
+            <section class="konten-utama">
+
+                <!-- area favorit -->
+                <div id="area-favorit">
+                    <div class="judul-konten">
+                        <h2>Lowongan Tersimpan (Favorit)</h2>
+                        <p>Daftar pekerjaan yang sudah Anda tandai untuk dilamar nanti.</p>
+                    </div>
+                    <div id="wadah-loker-favorit" class="box-promosi box-promosi-kiri">
+                    </div>
+                </div>
+
+                <!-- Area Status Lamaran Kerja-->
+                <!-- di beri class sembunyi agaar sembunyi dulu pas tampil di awal -->
+                <div id="area-status" class="sembunyi">
+                    <div class="judul-konten">
+                        <h2>Status Lamaran</h2>
+                        <p>Pantau hasil seleksi lamaran kerja Anda secara *real-time* di sini.</p>
+                    </div>
+                    <!-- Di dalam wadah kosong untuk kartu statusnya -->
+                    <div id="wadah-status-lamaran" class="box-promosi box-promosi-kiri">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="footer-konten">
+            <div class="footer-info">
+                <h3>Job Skill Analyzer</h3>
+                <p>Job Skill Analyzer adalah platform karir terdepan yang menghubungkan talenta profesional dengan perusahaan impian melalui analisis keahlian yang akurat. Kami berkomitmen untuk menyederhanakan perjalanan rekrutmen Anda</p>
+            </div>
+            <div class="footer-link">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="/HTML/cari_jobs.html">Cari Jobs</a></li>
+                    <li><a href="/HTML/my_akun.html">My Favorit</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-sosmed">
+                <h3>Hubungi Kami</h3>
+                <div class="ikon-sosmed">
+                    <a href="#"><span class="material-icons">photo_camera</span></a>
+                    <a href="#"><span class="material-icons">groups</span></a>
+                    <a href="#"><span class="material-icons">work</span></a>
+                    <a href="#"><span class="material-icons">chat</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2026 Job Skill Analyzer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="wadah-toast" class="wadah-toast"></div>
+    <script src="/JS/my_akun.js"></script>
+</body>
+
+</html>

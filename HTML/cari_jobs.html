@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Jobs-Job Skill Analyzer</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/CSS/coba1.css">
+    <link rel="stylesheet" href="/CSS/cari_jobs.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-navigasi">
+            <div class="header-logo">Job Skill Analyzer</div>
+            <nav>
+                <ul id="menu-navigasi">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="#" class="aktif teks-hijau">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html">My Akun</a></li>
+                </ul>
+            </nav>
+
+            <div class="login-register">
+
+                <div id="area-belum-login" class="area-auth">
+                    <button class="login" id="login" >Login</button>
+                    <button class="register" id="register">Register</button>
+                </div>
+
+                <!-- JIKA SUDAH LOGIN -->
+                <div id="area-sudah-login" class="area-profil sembunyi">
+                    <a href="#" class="profil-mini">
+                        <img id="foto-profil" src="" alt="Profil">
+                        <span id="nama-profil">Nama</span>
+                    </a>
+                    <span class="material-icons btn-logout" id="tombol-logout" title="Keluar">logout</span>
+                </div>
+
+                <!-- Tombol menu HP -->
+                <span class="material-icons" id="tombol-menu">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-cari-jobs">
+            <div class="banner-konten">
+                <h1>Cari Pekerjaan Berdasarkan Skill</h1>
+                <p>Jelajahi ratusan lowongan pekerjaan IT dari perusahaan lokal maupun global.</p>
+
+                <div class="search-box-jobs">
+                    <input type="text" placeholder="Ketik Keahlian IT/posisi" id="input-posisi">
+                    <input type="text" placeholder="Lokasi..." id="input-lokasi">
+                    <button type="button" id="btn-cari">cari</button>
+                    <button type="button" id="btn-reset">Reset</button>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pencarian">
+            <div class="area-kontrol">
+                <div class="saklar">
+                    <button type="button" id="loker-lokal" class="aktif">🇮🇩 LOKAL</button>
+                    <button type="button" id="loker-global">🌍 GLOBAL</button>
+                </div>
+
+                <div class="baris-filter">
+                    <button id="btn-tambah-filter">[+ Tambah Filter]</button>
+                    <div id="wadah-kapsul"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="area-hasil">
+            <div class="box-promosi" id="wadah-loker">
+
+            </div>
+            <div class="navigasi-halaman">
+                <button id="btn-sebelumnya">Sebelumnya</button>
+                <span id="btn-halaman">Halaman</span>
+                <button id="btn-selanjutnya">Selanjutnya</button>
+
+            </div>
+
+        </section>
+
+        <div class="modal-overlay" id="modal-filter">
+            <div class="modal-konten">
+                <h3>⚙️ Pilih Filter</h3>
+                <div class="grup-filter" id="grup-checkbox">
+                    <label><input type="checkbox" class="cb-skill" value="android"> Android</label><br>
+                    <label><input type="checkbox" class="cb-skill" value="AWS"> AWS Cloud</label><br>
+                    <label><input type="checkbox" class="cb-skill" value="CSS"> CSS / Frontend</label><br>
+                    <label><input type="checkbox" class="cb-skill" value="go"> Golang (Go)</label><br>
+                </div>
+                <button id="btn-tutup-modal">Terapkan Filter</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-konten">
+            <div class="footer-info">
+                <h3>Job Skill Analyzer</h3>
+                <p>Job Skill Analyzer adalah platform karir terdepan yang menghubungkan talenta profesional dengan
+                    perusahaan impian melalui analisis keahlian yang akurat. Kami berkomitmen untuk menyederhanakan
+                    perjalanan rekrutmen Anda</p>
+            </div>
+            <div class="footer-link">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="#" class="aktif teks-hijau">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html">My Akun </a></li>
+                </ul>
+            </div>
+            <div class="footer-sosmed">
+                <h3>Hubungi Kami</h3>
+                <div class="ikon-sosmed">
+
+                    <a href="#"><span class="material-icons">photo_camera</span></a> <!-- Pengganti IG -->
+                    <a href="#"><span class="material-icons">groups</span></a> <!-- Pengganti FB -->
+                    <a href="#"><span class="material-icons">work</span></a> <!-- Pengganti LinkedIn -->
+                    <a href="#"><span class="material-icons">chat</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2026 Job Skill Analyzer. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="wadah-toast" class="wadah-toast"></div>
+    <script src="/JS/cari_jobs.js"></script>
+
+</body>
+
+</html>

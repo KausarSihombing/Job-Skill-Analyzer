@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Job Skill Analyzer</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/CSS/coba1.css">
+    <link rel="stylesheet" href="/CSS/cari_jobs.css">
+    <link rel="stylesheet" href="/CSS/kontak.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-navigasi">
+            <div class="header-logo">Job Skill Analyzer</div>
+            <nav>
+                <ul id="menu-navigasi">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="/HTML/cari_jobs.html">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html" class="aktif teks-hijau">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html">My Akun</a></li>
+                </ul>
+            </nav>
+            <div class="login-register">
+                <div id="area-belum-login" class="area-auth">
+                    <button class="login"  id="login">Login</button>
+                    <button class="register" id="register">Register</button>
+                </div>
+                <div id="area-sudah-login" class="area-profil sembunyi">
+                    <a href="#" class="profil-mini">
+                        <img id="foto-profil-header" src="" alt="Profil">
+                        <span id="nama-profil-header">Nama</span>
+                    </a>
+                    <span class="material-icons btn-logout" id="tombol-logout-header" title="Keluar">logout</span>
+                </div>
+                <span class="material-icons" id="tombol-menu">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- bagian kotak luar-->
+        <section class="hero-kontak">
+            <h1>Hubungi Kami</h1>
+            <p>Punya pertanyaan atau butuh bantuan? Tim kami siap mendengarkan!</p>
+        </section>
+
+        <!-- bagian area kotak -->
+        <section class="area-kontak">
+            <div class="box-kontak">
+
+                <!-- bagian kiri:info kotak -->
+                <div class="info-kontak">
+                    <h2>Informasi Kontak</h2>
+                    <p>Silakan hubungi kami melalui detail di bawah ini:</p>
+
+                    <div class="item-info">
+                        <span class="material-icons ikon-kontak">location_on</span>
+                        <div>
+                            <h3>Alamat</h3>
+                            <p>Jl.Dakota,Sukaraja,Kota Bandung,Jawa Barat,Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="item-info">
+                        <span class="material-icons ikon-kontak">email</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>kautsarsihombing@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="item-info">
+                        <span class="material-icons ikon-kontak">phone</span>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>+62 831-8437-3338</p>
+                        </div>
+                    </div>
+                    <div class="sosmed-kontak">
+                        <h3>Hubungi Kami</h3>
+                        <div class="ikon-sosmed-box">
+                            <a href="https://wa.me/620318437338" target="_blank"><img src="/assets/wa.jfif" alt="wa" class="ikon-gambar-sosmed"></a>
+                            <a href="https://www.instagram.com/kautsar0411?igsi=NTBwY2prMW0xdDQ1" target="_blank"><img src="/assets/ig.png" alt="Instagram" class="ikon-gambar-sosmed"></a>
+                            <a href="#" target="_blank"><img src="/assets/LinkedIn_logo_initials.png" alt="LinkedIn" class="ikon-gambar-sosmed"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bagian kanan:formulir -->
+                <div class="form-kontak">
+                    <h2>Kirim Pesan</h2>
+                    <form action="#" id="form-pesan">
+                        <div class="grup-input">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+                        </div>
+
+                        <div class="grup-input">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="contoh@email.com" required>
+                        </div>
+
+                        <div class="grup-input">
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-kirim">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer>
+        <div class="footer-konten">
+            <div class="footer-info">
+                <h3>Job Skill Analyzer</h3>
+                <p>Job Skill Analyzer adalah platform karir terdepan yang menghubungkan talenta profesional dengan
+                    perusahaan impian melalui analisis keahlian yang akurat. Kami berkomitmen untuk menyederhanakan
+                    perjalanan rekrutmen Anda</p>
+            </div>
+            <div class="footer-link">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="/HTML/cari_jobs.html">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html">My Akun</a></li>
+                </ul>
+            </div>
+            <div class="footer-sosmed">
+                <h3>Hubungi Kami</h3>
+                <div class="ikon-sosmed">
+                    <a href="#"><span class="material-icons">photo_camera</span></a>
+                    <a href="#"><span class="material-icons">groups</span></a>
+                    <a href="#"><span class="material-icons">work</span></a>
+                    <a href="#"><span class="material-icons">chat</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2026 Job Skill Analyzer. All rights reserved.</p>
+        </div>
+        </footer>
+        <div id="wadah-toast" class="wadah-toast"></div>
+
+        <script src="/JS/kontak.js"></script>
+</body>
+
+</html>

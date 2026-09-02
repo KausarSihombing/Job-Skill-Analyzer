@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Job Skill Analyzer</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/CSS/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+
+            <!-- tombol kembali -->
+            <a href="../index.html" class="btn-kembali">
+                <span class="material-icons">arrow_back</span> Kembali ke Beranda
+            </a>
+
+            <div class="header-login">
+                <h2>Selamat Datang</h2>
+                <p>Silakan login ke akun Anda</p>
+            </div>
+
+            <form action="#" id="form-login">
+                <div class="grup-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="contoh@gmail.com" required>
+                </div>
+
+                <div class="grup-input">
+                    <label for="pw">Password</label>
+                    <input type="password" id="pw" placeholder="Masukkan password..." required>
+                </div>
+
+                <!-- fitur ingatkan saya -->
+                <div class="opsi-tambahan">
+                    <label class="ingatkan-saya">
+                        <input type="checkbox"> Ingatkan saya
+                    </label>
+                    <a href="#" class="lupa-pw">Lupa password?</a>
+                </div>
+
+                <button type="submit" class="btn-utama">Login</button>
+
+                <p class="teks-bawah">Belum punya akun? <a href="daftar.html">Daftar sekarang</a></p>
+            </form>
+
+        </div>
+    </div>
+    <script src="/JS/daftar.js"></script>
+</body>
+
+</html>
