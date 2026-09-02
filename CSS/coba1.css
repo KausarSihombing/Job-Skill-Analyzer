@@ -1,0 +1,1054 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.teks-hijau {
+    color: #189D82 !important;
+    font-weight: bold;
+}
+/* 1.untuk header dan banner */
+/*  --------------start------------ */
+header {
+    background-image: linear-gradient(rgba(20, 52, 65, 0.85), rgba(20, 52, 65, 0.85)), url(/assets/bg_header.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Navigasi Melayang */
+header .header-navigasi {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(20, 52, 65, 0.85);
+    /* Transparan */
+    backdrop-filter: blur(12px);
+    /* Efek Kaca */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+header .header-navigasi .header-logo {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header .header-navigasi nav ul li {
+    list-style: none;
+}
+
+header .header-navigasi nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header .header-navigasi nav ul li a:hover {
+    background-color: #189D82;
+}
+
+header .header-navigasi .login-register {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+header .header-navigasi .login,
+header .header-navigasi .register {
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #189D82;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header .header-navigasi .login:hover,
+header .header-navigasi .register:hover {
+    background-color: #127964;
+}
+
+/* Ikon Menu  */
+header .header-navigasi .login-register i {
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-left: 10px;
+}
+
+/* ------------------------- */
+/*  tempat tombol login & register */
+.area-auth {
+    display: flex;
+    gap: 15px;
+}
+
+/* tempat profil user */
+.area-profil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profil-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.profil-mini img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.btn-logout {
+    color: #EF4444;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.btn-logout:hover {
+    color: #B91C1C;
+}
+
+/*  Untuk menyembunyikan elemen oleh js nanti */
+.sembunyi {
+    display: none !important;
+}
+
+/* -------------------------- */
+
+/* Banner Konten */
+.header-banner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px 20px;
+    /* Jarak atas agar tidak tertutup nav fixed */
+    width: 100%;
+}
+
+.header-banner .banner-kata {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.header-banner .banner-kata h3 {
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header-banner .banner-kata h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.header-banner .banner-kata p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.header-banner .banner-cari {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    gap: 15px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.header-banner .banner-cari .banner-input {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.header-banner .banner-cari .banner-input input,
+.header-banner .banner-cari .banner-input select {
+    padding: 12px 15px;
+    flex: 1;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* Efek nyala saat input di-klik */
+.header-banner .banner-cari .banner-input input:focus,
+.header-banner .banner-cari .banner-input select:focus {
+    outline: 2px solid #189D82;
+    background-color: #F8FAFC;
+}
+
+.banner-btn button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    background-color: #189D82;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner-btn button:hover {
+    background-color: #127964;
+}
+
+/* ==================================================================================================== */
+/* --------end header and banner */
+
+/* -----untuk kategori----- */
+
+/* ---------start------------- */
+main .kategories {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    background-color: #F9F9F9;
+}
+
+main .kategories .title-kategories {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+main .kategories .title-kategories h2 {
+    font-size: 2.2rem;
+    color: #1E293B;
+    margin-bottom: 1rem;
+}
+
+main .kategories .title-kategories p {
+    color: #64748B;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+main .kategories .container-card {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main .kategories .container-card .card {
+    flex: 1;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+main .kategories .container-card .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(24, 157, 130, 0.15);
+    border-color: #189D82;
+}
+
+main .kategories .container-card .material-icons {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    color: #189D82;
+}
+
+
+main .kategories .container-card .card h3 {
+    font-size: 1.1rem;
+    color: #1E293B;
+}
+
+main .kategories .kategori-link {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+main .kategories .kategori-link a {
+    text-decoration: none;
+    color: #189D82;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: 2px solid #189D82;
+    border-radius: 30px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+main .kategories .kategori-link a:hover {
+    background-color: #189D82;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* -----end dari kategori------------ */
+
+/* ================================================================================================================ */
+/* ---------------ulasan----------------- */
+/* ----------start--------------------- */
+main .ulasan {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+main .ulasan h2 {
+    font-size: 2.2rem;
+    color: #1E293B;
+    margin-bottom: 1rem;
+}
+
+main .ulasan p {
+    color: #64748B;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+main .ulasan .ulasan-box {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+main .ulasan .ulasan-box .ulasan-rel {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: geserTerus 25s linear infinite;
+}
+
+main .ulasan .ulasan-box .ulasan-rel:hover {
+    animation-play-state: paused;
+}
+
+@keyframes geserTerus {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+main .ulasan .ulasan-box .ulasan-rel .ulasan-card {
+    width: 22rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2.5rem 1.5rem;
+    background-color: #2E4756;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+main .ulasan .ulasan-box .ulasan-rel .ulasan-card .bingakai-foto {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #189D82;
+}
+
+main .ulasan .ulasan-box .ulasan-rel .ulasan-card .bingakai-foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main .ulasan .ulasan-box .ulasan-rel .ulasan-card h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+main .ulasan .ulasan-box .ulasan-rel .ulasan-card h4 {
+    color: #A0B2C0;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+}
+
+main .ulasan .ulasan-box .ulasan-rel .ulasan-card p {
+    font-style: italic;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #D1D5DB;
+}
+
+/* ------end dari ulasan */
+
+/* ================================================================================================================ */
+/*-----------how it works--------------           */
+/* ----------start-------------------*/
+main .cara-kerja {
+    padding: 5rem 2rem;
+    color: white;
+    background-color: #2E4756;
+    text-align: center;
+}
+
+main .cara-kerja .cara-kerja-judul {
+    margin-bottom: 4rem;
+}
+
+main .cara-kerja .cara-kerja-judul h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+main .cara-kerja .cara-kerja-judul p {
+    color: #A0B2C0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+main .cara-kerja .langkah-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main .cara-kerja .langkah-box .langkah-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 28%;
+}
+
+main .cara-kerja .langkah-box .langkah-card .ikon-bulat {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #189D82;
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+main .cara-kerja .langkah-box .langkah-card .ikon-bulat:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem rgba(24, 157, 130, 0.5);
+    border-color: white;
+}
+
+
+main .cara-kerja .langkah-box .langkah-card .ikon-bulat .material-icons {
+    font-size: 3rem;
+    color: white;
+}
+
+main .cara-kerja .langkah-box .panah-langkah {
+    font-size: 2rem;
+    color: #189D82;
+}
+
+main .cara-kerja .langkah-box .langkah-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+main .cara-kerja .langkah-box .langkah-card p {
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #A0B2C0;
+}
+
+/* -----------end dari how it works-------------------- */
+
+/* ========================================= */
+/* ---------------------featured jobs---------------*/
+/* ---------start featured jobs--------------------- */
+
+main .promosi-kerja {
+    padding: 5rem 2rem;
+    background-color: #F8FAFC;
+}
+
+main .promosi-kerja .judul {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+main .promosi-kerja .judul h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1E293B;
+    margin-bottom: 0.8rem;
+}
+
+main .promosi-kerja .judul p {
+    color: #64748B;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+main .promosi-kerja .box-promosi {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main .promosi-kerja .card-promosi {
+    background-color: #FFFFFF;
+    width: 31%;
+    min-width: 320px;
+    padding: 1.8rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid #F1F5F9;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+main .promosi-kerja .card-promosi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #E2E8F0;
+}
+
+main .promosi-kerja .card-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+main .promosi-kerja .info-perusahaan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* warna ikon hati */
+.btn-hati.tersimpan {
+    color: #EF4444;
+    transform: scale(1.15);
+}
+
+.btn-hati:hover {
+    color: #EF4444;
+    transform: scale(1.25);
+}
+
+
+main .promosi-kerja .info-perusahaan .ikon-pt {
+    font-size: 1.5rem;
+    color: #4285F4;
+}
+
+main .promosi-kerja .info-perusahaan .ikon-bintang {
+    color: #F59E0B;
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+
+main .promosi-kerja .btn-hati:hover {
+    color: #EF4444;
+    transform: scale(1.15);
+}
+
+main .promosi-kerja .card-promosi h3 {
+    font-size: 1.4rem;
+    color: #0F172A;
+    margin-bottom: 1.2rem;
+}
+
+main .promosi-kerja .card-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+main .promosi-kerja .badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-tipe {
+    background-color: #D1FAE5;
+    color: #059669;
+}
+
+.badge-lokasi {
+    background-color: #DBEAFE;
+    color: #2563EB;
+}
+
+.badge-remote {
+    background-color: #FFEDD5;
+    color: #EA580C;
+}
+
+.badge-pendidikan {
+    background-color: #F3E8FF;
+    color: #9333EA;
+}
+
+main .promosi-kerja .card-skill {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+main .promosi-kerja .judul-skill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94A3B8;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+main .promosi-kerja .kumpulan-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+main .promosi-kerja .skill-badge {
+    background-color: #F1F5F9;
+    color: #475569;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #E2E8F0;
+    transition: 0.3s;
+}
+
+main .promosi-kerja .skill-badge:hover {
+    background-color:#189D82;
+    color: #0F172A;
+}
+
+main .promosi-kerja .card-deadline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 1.2rem;
+}
+
+main .promosi-kerja .tgl-loker {
+    font-size: 0.85rem;
+    color: #64748B;
+    font-weight: 500;
+}
+
+main .promosi-kerja .card-deadline button {
+    padding: 10px 20px;
+    background-color: #189D82;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(24, 157, 130, 0.2);
+}
+
+main .promosi-kerja .card-deadline button:hover {
+    background-color: #127964;
+    box-shadow: 0 6px 12px rgba(24, 157, 130, 0.3);
+    transform: translateY(-2px);
+}
+/* ------end dari featured jobs------------ */
+
+/* ========================================================================================================================== */
+/* ------------footer------------------------------------------------  */
+/* -----start----------------------------------------------------------------- */
+footer {
+    background-color: #0F172A;
+    color: #F8FAFC;
+    padding-top: 5rem;
+}
+
+footer .footer-konten {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem 2rem;
+}
+
+footer .footer-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+footer .footer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #189D82;
+    letter-spacing: 1px;
+}
+
+footer .footer-info p {
+    color: #94A3B8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    max-width: 400px;
+}
+
+footer .footer-link h3,
+footer .footer-sosmed h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer .footer-link {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer .footer-link ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-link ul li {
+    margin-bottom: 1rem;
+}
+
+footer .footer-link ul li a {
+    text-decoration: none;
+    color: #94A3B8;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+footer .footer-link ul li a:hover {
+    color: #189D82;
+    transform: translateX(8px);
+}
+
+footer .footer-sosmed {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer .footer-sosmed .ikon-sosmed {
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-sosmed .ikon-sosmed a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #94A3B8;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .footer-sosmed .ikon-sosmed a:hover {
+    background-color: #189D82;
+    color: #FFFFFF;
+    border-color: #189D82;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(24, 157, 130, 0.4);
+}
+
+footer .copy {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: #0B1120;
+    color: #64748B;
+    font-size: 0.9rem;
+    border-top: 1px solid #1E293B;
+}
+
+/* -------------------end dari footer------------------------ */
+
+/* untuk sembunyiin menu bar nya */
+
+#tombol-menu {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* untuk nontifikation */
+
+/* ========================================= */
+/* NOTIFIKASI TOAST                          */
+/* ========================================= */
+
+/* 1. Posisi wadah agar melayang di pojok kanan bawah */
+#wadah-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 120;
+}
+
+/* 2. Animasi meluncur */
+@keyframes notif {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 3. Desain Kotak Toast (Gunakan titik, BUKAN pagar!) */
+.toast {
+    background-color: #189D82; /* Warna default: Hijau (Sukses) */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    animation: notif 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+    font-weight: 600;
+}
+
+/* 4. Warna Khusus untuk Error (Belum Login) */
+.toast.toast-error {
+    background-color: #EF4444; /* Warna Merah */
+}
+/* responsif kita */
+@media screen and (max-width: 768px) {
+
+    /* tomobol menu */
+    header .header-navigasi #tombol-menu {
+        display: block;
+    }
+
+    .login-register button {
+        /* display: none; */
+        display: inline-block;
+        width: 100%;
+        margin-top: 5px;
+        
+    }
+
+    #menu-navigasi {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+      
+        top: 70px;
+       
+        right: 0;
+      
+        width: 200px;
+       
+        text-align: left;
+      
+        padding: 20px;
+      
+        border-radius: 0 0 0 15px;
+       
+
+        background-color: #143441;
+        box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.2);
+       
+        z-index: 150;
+    }
+
+    #menu-navigasi li {
+        margin: 15px 0;
+        padding-left: 10px;
+    }
+
+    #menu-navigasi.tampil-aktif {
+        display: flex;
+    }
+
+    /* header */
+    header .header-navigasi {
+        padding: 15px 20px;
+    }
+
+    header .header-navigasi .login-register i {
+        display: block;
+    }
+
+    /* banner */
+    .header-banner {
+        padding: 100px 15px 40px 15px;
+    }
+
+    .header-banner .banner-kata h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-banner .banner-cari {
+        flex-direction: column;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .header-banner .banner-cari .banner-input {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .header-banner .banner-cari .banner-input input,
+    .header-banner .banner-cari .banner-input select {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .banner-btn,
+    .banner-btn button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* kategori */
+    main .kategories {
+        padding: 3rem 1.5rem;
+    }
+
+    main .kategories .container-card {
+        flex-wrap: wrap;
+    }
+
+    main .kategories .container-card .card {
+        width: 45%;
+        flex: auto;
+    }
+
+    /* cara kerja */
+    main .cara-kerja .langkah-box {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    main .cara-kerja .langkah-box .langkah-card {
+        width: 100%;
+    }
+
+    main .cara-kerja .langkah-box .panah-langkah {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+
+    /* promosi kerja */
+    main .promosi-kerja {
+        padding: 4rem 1.5rem;
+    }
+
+    main .promosi-kerja .box-promosi {
+        padding: 0;
+    }
+
+    main .promosi-kerja .card-promosi {
+        width: 100%;
+        min-width: unset;
+    }
+
+    /* foooter */
+    footer .footer-konten {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 0 1.5rem 3rem 1.5rem;
+    }
+}

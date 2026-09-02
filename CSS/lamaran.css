@@ -1,0 +1,321 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F8FAFC;
+    color: #334155;
+}
+
+.lamaran-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.btn-kembali {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748B;
+    text-decoration: none;
+    font-size: 0.95rem;
+    align-self: flex-start;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    transition: 0.3s;
+}
+
+.btn-kembali:hover {
+    color: #189D82;
+}
+
+.lamaran-box {
+    display: flex;
+    background: white;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* KIRI */
+.info-loker {
+    flex: 1;
+    background-color: #143441;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ikon-gedung {
+    font-size: 3rem;
+    color: #189D82;
+    margin-bottom: 1rem;
+}
+
+.info-loker h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-loker p {
+    color: #94A3B8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.info-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.info-detail span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #E2E8F0;
+}
+
+.pesan-semangat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-style: italic;
+    color: #CBD5E1;
+    line-height: 1.6;
+}
+
+/* KANAN */
+.form-area {
+    flex: 1.5;
+    padding: 3rem;
+}
+
+.form-area h3 {
+    font-size: 1.5rem;
+    color: #0F172A;
+    margin-bottom: 2rem;
+}
+
+.grup-sejajar {
+    display: flex;
+    gap: 1rem;
+}
+
+.grup-sejajar .grup-input {
+    flex: 1;
+}
+
+.grup-input {
+    margin-bottom: 1.5rem;
+}
+
+.grup-input label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.grup-input input[type="text"],
+.grup-input input[type="email"],
+.grup-input input[type="url"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    outline: none;
+    background-color: #F8FAFC;
+    transition: 0.3s;
+}
+
+.grup-input input:focus {
+    border-color: #189D82;
+    background-color: white;
+}
+
+/* AREA UPLOAD KHUSUS */
+.area-upload {
+    border: 2px dashed #CBD5E1;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background-color: #F8FAFC;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.area-upload:hover {
+    border-color: #189D82;
+    background-color: #F0FDFA;
+}
+
+.ikon-upload {
+    font-size: 2.5rem;
+    color: #189D82;
+    margin-bottom: 0.5rem;
+}
+
+.area-upload p {
+    font-weight: 500;
+    color: #334155;
+}
+
+.ukuran-file {
+    font-size: 0.8rem;
+    color: #94A3B8;
+}
+
+.input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.btn-kirim {
+    width: 100%;
+    padding: 1rem;
+    background-color: #189D82;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-kirim:hover {
+    background-color: #127964;
+    transform: translateY(-2px);
+}
+
+/* untuk teks area (kumpulan skill) */
+.grup-input textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #334155;
+    background-color: #F8FAFC;
+    resize: vertical;
+    /* User hanya bisa menarik kotak ke bawah, bukan ke samping */
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+ 
+}
+
+
+.grup-input textarea:focus {
+    border-color: #189D82;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(24, 157, 130, 0.1);
+  
+}
+
+
+
+
+/* tablet */
+@media screen and (max-width: 992px) {
+    .info-loker, .form-area {
+        padding: 2rem; 
+    }
+}
+
+/* hp/mobile */
+@media screen and (max-width: 768px) {
+    .lamaran-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .lamaran-box {
+        flex-direction: column; 
+        border-radius: 15px;
+    }
+
+   
+    .grup-sejajar {
+        flex-direction: column;
+        gap: 0; 
+    }
+
+    .info-loker {
+        padding: 2rem 1.5rem; 
+        text-align: center;
+    }
+
+    
+    .info-detail {
+        align-items: center; 
+        margin-bottom: 2rem;
+    }
+
+    .info-loker h2 {
+        font-size: 1.75rem; 
+    }
+
+    .ikon-gedung {
+        font-size: 2.5rem;
+    }
+
+    .form-area {
+        padding: 2rem 1.5rem;
+    }
+    
+    .area-upload {
+        padding: 1.5rem; 
+    }
+}
+
+/* untuk hp kecil */
+@media screen and (max-width: 480px) {
+    .info-loker h2 {
+        font-size: 1.5rem; 
+    }
+
+    .info-loker p {
+        font-size: 0.95rem;
+    }
+
+    .btn-kembali {
+        font-size: 0.85rem;
+    }
+
+    .form-area h3 {
+        font-size: 1.3rem;
+    }
+
+    .grup-input label {
+        font-size: 0.9rem;
+    }
+
+    .btn-kirim {
+        font-size: 1rem;
+        padding: 0.8rem; 
+    }
+}

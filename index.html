@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/CSS/coba1.css">
+    <!-- <link rel="stylesheet" href="/CSS/cari_jobs.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-navigasi">
+            <div class="header-logo">Job Skill Analyzer</div>
+            <nav>
+                <ul id="menu-navigasi">
+                    <li><a href="#" class="aktif teks-hijau">Beranda</a></li>
+                    <li><a href="/HTML/cari_jobs.html">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html">My Akun</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="login-register">
+                <!-- TAMPILAN 1: Jika user BELUM login -->
+                <div id="area-belum-login" class="area-auth">
+                    <!-- Kita arahkan langsung ke halaman login/daftar yang sudah Anda buat -->
+                    <button class="login" id="login">Login</button>
+                    <button class="register" id="reg">Register</button>
+                </div>
+
+                <!-- TAMPILAN 2: Jika user SUDAH login -->
+                <div id="area-sudah-login" class="area-profil sembunyi">
+                    <a href="#" class="profil-mini">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=189D82&color=fff" alt="Profil"
+                            id="foto-profil">
+                        <span id="nama-profil"></span>
+                    </a>
+                    <!-- Tombol Logout pakai ikon -->
+                    <span class="material-icons btn-logout" id="tombol-logout" title="Keluar">logout</span>
+                </div>
+
+                <!-- Tombol menu HP -->
+                <span class="material-icons" id="tombol-menu">menu</span>
+            </div>
+
+        </div>
+        <div class="header-banner">
+            <div class="banner-kata">
+                <h3>Job Skill Analyzer</h3>
+                <h1>Temukan Masa Depan Karir Anda Berdasarkan Skill</h1>
+                <p>Platform analisis kecocokan skill terbaik untuk Developer, Engineer, dan IT Profesional.</p>
+            </div>
+            <div class="banner-cari">
+                <div class="banner-input">
+                    <input type="text" placeholder="Keywords/Skills/Title" id="input-posisi">
+                    <input type="text" placeholder="Location" id="input-lokasi">
+                    <select>
+                        <option>Semua Kategori</option>
+                        <option>Programming</option>
+                        <option>Design</option>
+                        <option>Data Science</option>
+                    </select>
+                </div>
+                <div class="banner-btn"><button type="button" id="btn-cari">Cari</button></div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="kategories">
+            <div class="title-kategories">
+                <h2>Job Katagori</h2>
+                <p>Temukan lowongan pekerjaan terbaru dan terverifikasi di kategori ini untuk mengembangkan potensi
+                    serta masa depan profesional Anda</p>
+            </div>
+            <div class="container-card">
+
+
+                <div class="card card-js">
+                    <span class="material-icons icon-logo">data_object</span>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-logo">code</span>
+                    <h3>Java</h3>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-logo">terminal</span>
+                    <h3>Python</h3>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-logo">integration_instructions</span>
+                    <h3>PHP</h3>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-logo">memory</span>
+                    <h3>Golang</h3>
+                </div>
+
+            </div>
+
+            <div class="kategori-link">
+                <a href="/HTML/cari_jobs.html">Tampilkan Semua Kategori ➔</a>
+            </div>
+        </section>
+
+        <section class="ulasan">
+            <h2>Apa Kata Mereka?</h2>
+            <p>Dengar langsung pengalaman nyata dari para profesional yang sukses mendapatkan pekerjaan impian mereka
+                lewat platform kami</p>
+            <div class="ulasan-box">
+                <div class="ulasan-rel">
+                    <div class="ulasan-card ulasan-card-1">
+                        <div class="bingakai-foto"><img src="/assets/ricci.jpeg" alt="foto"></div>
+                        <h3>Ricci</h3>
+                        <h4>Backend Engineer</h4>
+                        <p>Sumpah, ini website lowongan kerja IT paling bagus dan user-friendly yang pernah saya pakai!
+                            Navigasinya mulus, fiturnya lengkap, dan khusus buat tech talent bener-bener surganya loker.
+                        </p>
+
+                    </div>
+                    <div class="ulasan-card ulasan-card-2">
+                        <div class="bingakai-foto"><img src="/assets/aziz.jpeg" alt="foto"></div>
+                        <h3>Aziz</h3>
+                        <h4>Frontend Developer</h4>
+                        <p>Website ini bener-bener game-changer buat anak IT. Dari sekian banyak portal loker, cuma di
+                            sinilah saya ngerasa posisi tech stack saya pas banget dan lamaran bener-bener diproses
+                            cepat.</p>
+
+                    </div>
+                    <div class="ulasan-card ulasan-card-3">
+                        <div class="bingakai-foto"><img src="/assets/rifki.jpeg" alt="foto"></div>
+                        <h3>Rifki</h3>
+                        <h4>Data Analyst</h4>
+                        <p>Gila sih, kualitas lowongan IT di sini beda banget dari yang lain—mulai dari startup unicorn
+                            sampai perusahaan global ada, semuanya jelas dan minim lowongan abal-abal. Top banget!</p>
+
+                    </div>
+                    <div class="ulasan-card ulasan-card-1">
+                        <div class="bingakai-foto"><img src="/assets/rialbi.jpeg" alt="foto"></div>
+                        <h3>Rialbi</h3>
+                        <h4>UI/UX Designer</h4>
+                        <p>Situs loker IT paling worth it! Gak pakai ribet nyaring bahasa pemrograman yang gak sesuai,
+                            berkat website super keren ini saya dapet kerjaan remote impian dengan gaji jos.</p>
+
+                    </div>
+                    <div class="ulasan-card ulasan-card-2">
+                        <div class="bingakai-foto"><img src="/assets/harahap.jpeg" alt="foto"></div>
+                        <h3>Rafly</h3>
+                        <h4>Frontend Develope</h4>
+                        <p>Tampilan modern, filter tech stack-nya akurat, dan platformnya juara. Website ini benar-benar
+                            ngebantu banget buat programmer yang serius pengen scale-up karier.</p>
+
+                    </div>
+                    <div class="ulasan-card ulasan-card-3">
+                        <div class="bingakai-foto"><img src="/assets/restu.jpeg" alt="foto"></div>
+                        <h3>Restu</h3>
+                        <h4>CEO Yang Menyamar</h4>
+                        <p>Jujur, awalnya agak skeptis, tapi setelah nyoba sendiri langsung takjub. Sungguh website
+                            loker IT terbaik, terpercaya, dan wajib dicoba semua talenta digital!</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="cara-kerja">
+            <div class="cara-kerja-judul">
+                <h2>How It Works</h2>
+                <p>"Hanya butuh tiga langkah sederhana untuk memulai karir impianmu. Cukup cari, lamar, dan bersiaplah
+                    untuk sukses</p>
+            </div>
+
+            <div class="langkah-box">
+                <div class="langkah-card">
+                    <div class="ikon-bulat">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <h3>Seek For Jobs</h3>
+                    <p>Jelajahi berbagai peluang karir dari perusahaan terkemuka. Gunakan fitur pencarian kami untuk
+                        menyaring posisi berdasarkan industri, lokasi, dan minat Anda dengan cepat</p>
+                </div>
+
+                <span class="material-icons panah-langkah">arrow_forward</span>
+
+                <div class="langkah-card">
+                    <div class="ikon-bulat">
+
+                        <span class="material-icons">edit_document</span>
+                    </div>
+                    <h3>Submit Proposal</h3>
+                    <p>Kirimkan lamaran dan tunjukkan mengapa Anda adalah kandidat terbaik. Unggah CV atau portofolio
+                        Anda untuk menonjolkan keahlian yang paling relevan dengan posisi tersebut.</p>
+                </div>
+
+
+                <span class="material-icons panah-langkah">arrow_forward</span>
+
+
+                <div class="langkah-card">
+                    <div class="ikon-bulat">
+
+                        <span class="material-icons">verified_user</span>
+                    </div>
+                    <h3>Get a job</h3>
+                    <p>Raih posisi yang tepat untuk masa depan Anda. Kembangkan karir bersama perusahaan yang menghargai
+                        dedikasi dan keahlian Anda</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="promosi-kerja">
+            <div class="judul">
+                <h2>featured job</h2>
+                <p>Rangkaian posisi strategis dari perusahaan pilihan kami. Temukan lingkungan terbaik untuk
+                    mendedikasikan dan mengembangkan keahlian Anda</p>
+            </div>
+            <div class="box-promosi" id="wadah-loker">
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-konten">
+            <div class="footer-info">
+                <h3>Job Skill Analyzer</h3>
+                <p>Job Skill Analyzer adalah platform karir terdepan yang menghubungkan talenta profesional dengan
+                    perusahaan impian melalui analisis keahlian yang akurat. Kami berkomitmen untuk menyederhanakan
+                    perjalanan rekrutmen Anda</p>
+            </div>
+            <div class="footer-link">
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="/HTML/cari_jobs.html">Cari Jobs</a></li>
+                    <li><a href="/HTML/tentang_kami.html">Tentang Kami</a></li>
+                    <li><a href="/HTML/kontak.html">Kontak</a></li>
+                    <li><a href="/HTML/my_akun.html">My Akun </a></li>
+                </ul>
+            </div>
+            <div class="footer-sosmed">
+                <h3>Hubungi Kami</h3>
+                <div class="ikon-sosmed">
+
+                    <a href="#"><span class="material-icons">photo_camera</span></a> <!-- IG -->
+                    <a href="#"><span class="material-icons">groups</span></a> <!--  FB -->
+                    <a href="#"><span class="material-icons">work</span></a> <!-- LinkedIn -->
+                    <a href="#"><span class="material-icons">chat</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2026 Job Skill Analyzer. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="wadah-toast" class="wadah-toast"></div>
+
+    <script src="/JS/script.js"></script>
+
+</body>
+
+</html>

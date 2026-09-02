@@ -1,0 +1,188 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Memastikan scroll hanya muncul jika layar benar-benar kecil */
+}
+
+/* kotak utama si login */
+.login-container {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 1rem; 
+    background-color: #F8FAFC;
+}
+
+.login-box {
+    width: 100%;             
+    max-width: 360px;        
+    padding: 1.5rem 2rem;    
+    border-radius: 1rem;    
+    background-color: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08); 
+    position: relative;
+}
+/* tombol kambali */
+.btn-kembali {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #64748B; 
+    text-decoration: none; 
+    font-size: 0.85rem;       
+    margin-bottom: 1rem; 
+    transition: 0.3s;
+}
+
+.btn-kembali:hover {
+    color: #189D82; 
+}
+
+.btn-kembali .material-icons {
+    font-size: 1.1rem;
+}
+
+.header-login {
+    text-align: center;
+    margin-bottom: 1.2rem;   
+}
+
+.header-login h2 {
+    color: #0F172A;
+    font-size: 1.5rem;       
+    margin: 0 0 0.3rem 0; 
+}
+
+.header-login p {
+    color: #64748B;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* formulir input */
+.grup-input {
+    margin-bottom: 0.8rem;   
+}
+
+.grup-input label {
+    display: block;
+    color: #334155;
+    font-weight: 500;
+    margin-bottom: 0.3rem;  
+    font-size: 0.85rem;
+}
+
+.grup-input input {
+    width: 100%;
+    padding: 0.5rem 0.8rem;  
+    border-radius: 0.4rem;
+    outline: none;
+    border: 1px solid #CBD5E1; 
+    font-family: inherit;
+    font-size: 0.85rem;    
+    transition: 0.3s;
+    background-color: #F8FAFC; 
+}
+
+.grup-input input:focus {
+    border-color: #189D82;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(24, 157, 130, 0.1); 
+}
+
+/* untuk checkbox dan link */
+.opsi-tambahan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;  
+    font-size: 0.8rem;      
+    color: #64748B;
+}
+
+.ingatkan-saya {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.opsi-tambahan a {
+    text-decoration: none;
+    color: #189D82;
+    font-weight: 500;
+}
+
+.opsi-tambahan a:hover {
+    text-decoration: underline;
+}
+
+/* tombol submit dan teks bawah */
+form button {
+    width: 100%;
+    padding: 0.6rem;         
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    background-color: #189D82;
+    color: white;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #127964;
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(24, 157, 130, 0.3);
+}
+
+.teks-bawah {
+    text-align: center;
+    margin-top: 1rem;        
+    color: #64748B;
+    font-size: 0.85rem;
+}
+
+.teks-bawah a {
+    text-decoration: none;
+    color: #189D82;
+    font-weight: 600; 
+}
+
+.teks-bawah a:hover {
+    text-decoration: underline;
+}
+
+
+
+.kotak-daftar {
+    max-width: 480px; 
+}
+
+.grup-sejajar {
+    display: flex;
+    gap: 0.8rem;             
+}
+
+.grup-sejajar .grup-input {
+    flex: 1; 
+}
+
+.kotak-syarat {
+    justify-content: center; 
+}
+
+@media (max-width: 480px) {
+    .grup-sejajar {
+        flex-direction: column;
+        gap: 0;
+    }
+}

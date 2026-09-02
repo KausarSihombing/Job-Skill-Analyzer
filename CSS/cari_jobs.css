@@ -1,0 +1,583 @@
+
+header {
+    background-image: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    background-color: #143441 !important; 
+}
+
+
+.teks-hijau {
+    color: #189D82 !important;
+    font-weight: bold;
+}
+
+/* khususu halalaman cari jobs */
+/* --------staart--------- */
+.banner-cari-jobs {
+    /* Background gambar dengan efek gelap transparan (overlay) */
+    background-image: linear-gradient(rgba(20, 52, 65, 0.85), rgba(20, 52, 65, 0.85)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1400&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /
+}
+
+.banner-konten {
+    max-width: 800px;
+    padding: 20px;
+    color: white;
+}
+
+.banner-konten h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.banner-konten p {
+    font-size: 1.1rem;
+    color: #A0B2C0;
+    margin-bottom: 30px;
+}
+
+/* untuk fitur search */
+.search-box-jobs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.search-box-jobs input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    flex: 1; 
+}
+
+/* Efek nyala saat input diklik */
+.search-box-jobs input:focus {
+    outline: 2px solid #189D82;
+}
+
+.search-box-jobs button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #189D82;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box-jobs button:hover {
+    background-color: #127964;
+    transform: scale(1.05);
+}
+
+/* untuk modal pop-up dan area kontrol */
+.area-kontrol {
+    max-width: 1000px;
+    margin: 30px auto; 
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* --- Desain Saklar--- */
+.saklar {
+    display: flex;
+    background-color: #f0f2f5;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.saklar button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    background: transparent;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* tombol akan menyala ketika kita kasih class nya aktif */
+.saklar button.aktif {
+    background-color: #189D82;
+    color: white;
+    box-shadow: 0 2px 10px rgba(24, 157, 130, 0.3);
+}
+
+/* --- tombol tambah filter--- */
+.baris-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#btn-tambah-filter {
+    padding: 10px 20px;
+    border: 2px dashed #189D82; 
+    border-radius: 8px;
+    background: white;
+    color: #189D82;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-tambah-filter:hover {
+    background: #f0fcf9;
+}
+
+@keyframes munculKartu {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- untuk wadah loker --- */
+#wadah-loker {
+    display: flex;
+    flex-wrap: wrap; /* agar turun pas layar sempit */
+    justify-content: center; 
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Gaya Dasar Kartu & Efek Melayang --- */
+.card-promosi {
+    background-color: #FFFFFF;
+    flex: 1 1 31%; 
+    max-width: 380px;
+    min-width: 320px; 
+    
+    padding: 1.8rem;
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); 
+    border: 1px solid #F1F5F9;
+    
+    display: flex;
+    flex-direction: column;
+    
+   
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: munculKartu 0.6s ease-out forwards;
+    
+    /* Pengaturan Transisi untuk Hover */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+
+.card-promosi:hover {
+    transform: translateY(-12px); 
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.1);
+    border-color: #189D82;
+}
+/* --- Logo, Perusahaan & Rating --- */
+.card-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.info-perusahaan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+/*  Ikon Google  */
+.info-perusahaan i.fa-google {
+    font-size: 1.5rem;
+    color: #4285F4;
+    background-color: #F1F5F9;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+/* Rating Bintang k */
+.info-perusahaan span:last-child {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FEF3C7; /* Kuning sangat pudar */
+    color: #D97706; /* Teks kuning gelap */
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.info-perusahaan span:last-child i.fa-star {
+    color: #F59E0B;
+    margin-right: 4px;
+}
+
+/* Ikon Hati / Favorit */
+.btn-hati {
+    font-size: 1.5rem;
+    color: #CBD5E1;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn-hati.tersimpan{
+    color: #EF4444;
+    transform: scale(1.15);
+}
+.btn-hati:hover {
+    color: #EF4444; 
+    transform: scale(1.25); /* Hati membesar sedikit saat disentuh */
+}
+
+/* --- 5. Judul Pekerjaan --- */
+.card-promosi h3 {
+    font-size: 1.4rem;
+    color: #0F172A;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+/* --- Tipe, Lokasi, Pendidikan --- */
+.card-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-tipe { background-color: #D1FAE5; color: #059669; }     
+.badge-lokasi { background-color: #DBEAFE; color: #2563EB; }   
+.badge-pendidikan { background-color: #F3E8FF; color: #9333EA;} 
+
+/* ---Area Syarat Keahlian  --- */
+.card-skill {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    
+    /* kotak latar belakang abu-abu pudar */
+    background-color: #F8FAFC;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px dashed #CBD5E1;
+}
+
+.judul-skill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748B;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.kumpulan-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-badge {
+    background-color: #FFFFFF;
+    color: #475569;
+    padding: 6px 14px;
+    border-radius: 8px; 
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+/*berubah jadi warna hijau tema */
+.skill-badge:hover {
+    background-color: #189D82;
+    color: #FFFFFF;
+    border-color: #189D82;
+}
+
+/* ---  Tanggal Deadline & Tombol Lamar --- */
+.card-deadline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 1.5rem;
+}
+
+.tgl-loker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.tgl-loker i {
+    color: #189D82; /* Warna ikon kalender  */
+    font-size: 1.1rem;
+}
+
+.card-deadline button {
+    padding: 12px 22px;
+    background-color: #189D82;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(24, 157, 130, 0.2);
+}
+
+.card-deadline button:hover {
+    background-color: #127964;
+    box-shadow: 0 8px 20px rgba(24, 157, 130, 0.4); 
+    transform: translateY(-3px);
+}
+
+.area-hasil .navigasi-halaman {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.area-hasil .navigasi-halaman button {
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    border: none;
+    background-color: #189D82;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s; 
+    font-weight: bold;
+}
+
+.area-hasil .navigasi-halaman button:hover {
+    background-color: #127964;
+    transform: translateY(-2px); 
+}
+
+/* Mengatur warna saat tombol tidak bisa diklik  */
+.area-hasil .navigasi-halaman button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Memberi gaya pada teks untuk Halaman 1 */
+.area-hasil .navigasi-halaman span {
+    font-weight: bold;
+    color: #143441;
+    font-size: 1.1rem;
+}
+/* ====================================================================================================== */
+/* ----------area untuk modal pop-up */
+.modal-overlay {
+    display: none; 
+    position: fixed; /* Membuatnya melayang kaku menutupi layar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 549;
+    justify-content: center; 
+    align-items: center;
+}
+
+/* Desain Kotak Putih di Tengah */
+.modal-konten {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px; /* Lebar maksimal supaya tidak terlalu besar di laptop */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-20px); /* Persiapan untuk efek animasi turun nantinya */
+}
+
+/* Desain Tombol di Dalam Modal */
+#btn-tutup-modal {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #189D82;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Tombol melebar penuh */
+}
+/* -------------- */
+/* Gaya untuk kapsul filter */
+.badge-filter {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #c7d2fe;
+    transition: all 0.3s ease;
+}
+
+.badge-filter:hover {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border-color: #fca5a5;
+}
+
+/*efek loading  */
+
+@keyframes shimmer {
+    from {
+        background-position: -200% 0;
+    }
+    to {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear; /* Ditambah 'linear' agar mulus tanpa jeda */
+    border-radius: 6px;
+}
+
+
+.card-skeleton {
+    background-color: #FFFFFF;
+    flex: 1 1 31%; 
+    max-width: 380px; 
+    min-width: 320px; 
+    padding: 1.8rem;
+    border-radius: 20px; 
+    border: 1px solid #F1F5F9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.skel-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+}
+
+.skel-judul {
+    width: 80%;
+    height: 25px;
+}
+
+.skel-label {
+    width: 100%;
+    height: 20px;
+}
+
+.skel-skill {
+    width: 100%;
+    height: 60px;
+}
+
+.skel-tombol {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px; 
+}
+
+
+/* untuk nontifikation */
+
+.wadah-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px; 
+    z-index: 550; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@keyframes notif {
+    from {
+        transform: translateX(100%);
+        opacity: 0; /* Tambahan: agar awalnya agak transparan */
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast {
+    background-color: #189D82;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    animation: notif 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+    font-weight: 600;
+}
+
+.toast-error {
+    background-color: #EF4444;
+}
+/* responsif */
+@media screen and (max-width: 768px) {
+    .search-box-jobs {
+        flex-direction: column;
+    }
+    .banner-konten h1 {
+        font-size: 2rem;
+    }
+    
+}
