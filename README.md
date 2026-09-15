@@ -31,25 +31,9 @@ fitur fitur yang terdapat di dalam projek ini:
 
 Karena proyek ini berjalan murni di sisi *Client-Side* (Frontend), cara menjalankannya sangat mudah:
 
-1. *Clone* repositori ini: `git clone [URL-REPO-ANDA]`
+1. *Clone* repositori ini: `git clone https://github.com/KausarSihombing/Job-Skill-Analyzer.git`
 2. Buka folder proyek.
 3. Buka file `cari-jobs.html` langsung di *browser* pilihan Anda, ATAU gunakan ekstensi **Live Server** di VS Code untuk pengalaman terbaik.
 4. Pastikan Anda memiliki koneksi internet agar data API dan ikon FontAwesome dapat dimuat dengan baik.
 
-## 📡 Struktur Data API
 
-Aplikasi ini mengkonsumsi data dari REST API eksternal. Berikut adalah contoh struktur JSON yang diproses:
-
-```json
-{
-  "lowongan": [
-    {
-      "id_pekerjaan": 2091101,
-      "nama_perusahaan": "Lemon.io",
-      "posisi": "Senior React Full-stack Developer",
-      "lokasi": "LATAM, Europe",
-      "skill_it": [".Net", "AWS", "backend", "react"],
-      "tanggal_buka": "27 Agustus 2026"
-    }
-  ]
-}
